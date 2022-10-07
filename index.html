@@ -124,7 +124,11 @@ body{
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("บันทึกข้อมูลเรียบร้อยแล้ว..ลูกค้าอย่าลืมกด 'ยืนยันการลงทะเบียน' ด้วยนะคะ"))
+                .then(response => fire(
+  'Good job!',
+  'You clicked the button!',
+  'success'
+))
                 .catch(error => console.error('Error!', error.message))
                   form.reset(); 
        return false; 
