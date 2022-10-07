@@ -124,16 +124,17 @@ body{
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              Swal.fire({
+              function success(){
+        
+        Swal.fire({
   position: 'center',
   icon: 'success',
   title: 'บันทึกข้อมูลเรียบร้อย',
   showConfirmButton: false,
   timer: 1500
 })
-                .catch(error => console.error('Error!', error.message))
-                  form.reset(); 
-       return false; 
+Swal.enableInput()
+      }
             })  
   window.onload = function(e){
       liff.init({liffId: "1657541684-0bQRQpXW"}, function(){
