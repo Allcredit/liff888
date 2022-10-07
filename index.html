@@ -124,7 +124,11 @@ body{
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert('You clicked the button!'))
+                .then(response => Swal.fire(
+  'Good job!',
+  'You clicked the button!',
+  'success'
+))
                 .catch(error => console.error('Error!', error.message))
                  
        return false; 
