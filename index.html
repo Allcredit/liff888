@@ -125,8 +125,8 @@ body{
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => Swal.fire(
-  'Good job!',
-  'You clicked the button!',
+  'บันทึกข้อมูลเรียบร้อย!',
+  'กรุณากดปุ่มยืนยันรับเครดิตฟรี',
   'success'
 ))
                 .catch(error => console.error('Error!', error.message))
